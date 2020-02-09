@@ -13,13 +13,10 @@ const Header = () => {
     }
   `)
   return (
-    <header className={headerStyles.header}>
-      <h1>
-        <Link
-          className={headerStyles.title}
-          activeClassName={headerStyles.activeNavItem}
-          to="/"
-        >
+    <header className={headerStyles.headerContainer}>
+      {/* <div id="navigation-bar"> */}
+      <h1 className={headerStyles.pageTitle}>
+        <Link activeClassName={headerStyles.activeNavItem} to="/">
           {data.site.siteMetadata.title}
         </Link>
       </h1>
@@ -60,6 +57,8 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+
+      {/* </div> */}
     </header>
   )
 }
